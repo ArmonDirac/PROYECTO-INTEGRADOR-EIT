@@ -57,3 +57,38 @@ nav {
   grid-area: navbar;
   padding: 0.5rem;
 }
+
+.page-about-us .approaches-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.page-about-us .approaches-container .mission__title,
+.page-about-us .approaches-container .vision__title,
+.page-about-us .approaches-container .values__title {
+  color: #212529;
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding-bottom: 0.25rem;
+}
+.page-about-us .approaches-container .mission__description,
+.page-about-us .approaches-container .vision__description,
+.page-about-us .approaches-container .values__description {
+  color: #343a40;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: justify;
+}
+.page-about-us .approaches-container .mission__image,
+.page-about-us .approaches-container .vision__image,
+.page-about-us .approaches-container .values__image {
+  height: -moz-fit-content;
+  height: fit-content;
+  width: 25%;
+  float: left;
+  margin: 0 0.5rem 0.25rem 0;
+}
+.page-about-us .approaches-container .vision__image {
+  float: right;
+  margin: 0 0 0.25rem 0.5rem;
+}
