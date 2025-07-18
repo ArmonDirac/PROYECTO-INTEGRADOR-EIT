@@ -4,11 +4,11 @@
 footer {
     grid-area: footer;
 
-    padding: var.$spacing-sm;
+    padding: var.$spacing-xs;
 
     .copyright {
-        color: var.$color-neutro-700;
-        font-size: var.$font-size-md;
+        color: var.$color-neutro-300;
+        font-size: var.$font-size-sm;
         font-weight: var.$font-weight-regular;
         text-align: center;
     }

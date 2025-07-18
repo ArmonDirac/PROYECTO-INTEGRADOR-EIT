@@ -5,22 +5,22 @@
     .approaches-container {
         display: flex;
         flex-direction: column;
-        gap: var.$spacing-lg;
+        gap: var.$spacing-sm;
 
         .mission,
         .vision,
         .values {
 
             &__title {
-                color: var.$color-neutro-900;
-                font-size: var.$font-size-lg;
+                color: var.$color-neutro-500;
+                font-size: var.$font-size-xl;
                 font-weight: var.$font-weight-bold;
                 padding-bottom: var.$spacing-xs;
             }
 
             &__description {
-                color: var.$color-neutro-700;
-                font-size: var.$font-size-md;
+                color: var.$color-neutro-100;
+                font-size: var.$font-size-lg;
                 font-weight: var.$font-weight-regular;
                 text-align: justify;
             }

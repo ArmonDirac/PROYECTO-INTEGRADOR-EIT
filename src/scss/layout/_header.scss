@@ -3,6 +3,11 @@
 
 header {
     grid-area: header;
-
-    padding: var.$spacing-lg;
+    padding: var.$spacing-xs;
+    text-align: center;
+    gap: 1rem;
+    img {
+        text-align: left;
+        width: 250px;
+    }
 }

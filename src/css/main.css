@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Courier New", Courier, monospace;
 }
 
 ul {
@@ -13,6 +13,10 @@ a:link,
 a:visited {
   color: #212529;
   text-decoration: none;
+}
+
+h1 {
+  color: #cfa37c;
 }
 
 img {
@@ -68,7 +72,7 @@ img {
 
 .slider {
   position: relative;
-  height: 25vh;
+  height: 40vh;
   width: 100%;
   overflow: hidden;
   box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
@@ -89,8 +93,8 @@ img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: top;
+     object-position: top;
 }
 @keyframes move-slide {
   0% {
@@ -131,13 +135,13 @@ img {
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.12);
 }
 .button--add {
-  background-color: #e6f4ea;
-  color: #134119;
-  border-color: #134119;
+  background-color: #3f3ffb;
+  color: #0e024f;
+  border-color: #0e024f;
 }
 .button--add:hover, .button--add:active {
-  background-color: #99dba3;
-  outline: 1px solid #134119;
+  background-color: #2713de;
+  outline: 1px solid #0e024f;
 }
 .button--remove {
   background-color: #fbeaea;
@@ -172,7 +176,8 @@ img {
   padding: 1rem 0;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #3b241a;
+  color: #e2c3a8;
+  text-align: center;
 }
 
 .form {
@@ -193,6 +198,7 @@ img {
 }
 
 body {
+  background-image: radial-gradient(#3f3ffb, #0e024f);
   height: 100vh;
   display: grid;
   grid-template-areas: "header" "navbar" "main" "footer";
@@ -201,23 +207,29 @@ body {
 
 footer {
   grid-area: footer;
-  padding: 0.5rem;
+  padding: 0.25rem;
 }
 footer .copyright {
-  color: #343a40;
-  font-size: 1rem;
+  color: #ced4da;
+  font-size: 0.875rem;
   font-weight: 400;
   text-align: center;
 }
 
 header {
   grid-area: header;
-  padding: 1.5rem;
+  padding: 0.25rem;
+  text-align: center;
+  gap: 1rem;
+}
+header img {
+  text-align: left;
+  width: 250px;
 }
 
 main {
   grid-area: main;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 nav {
@@ -229,8 +241,8 @@ nav .navbar {
   gap: 1rem;
 }
 nav .navbar__item {
-  color: #212529;
-  font-size: 1rem;
+  color: #ced4da;
+  font-size: 0.875rem;
 }
 nav .navbar__item:hover, nav .navbar__item--active {
   font-weight: 700;
@@ -239,21 +251,21 @@ nav .navbar__item:hover, nav .navbar__item--active {
 .page-about-us .approaches-container {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0.5rem;
 }
 .page-about-us .approaches-container .mission__title,
 .page-about-us .approaches-container .vision__title,
 .page-about-us .approaches-container .values__title {
-  color: #212529;
-  font-size: 1.25rem;
+  color: #6c757d;
+  font-size: 1.5rem;
   font-weight: 700;
   padding-bottom: 0.25rem;
 }
 .page-about-us .approaches-container .mission__description,
 .page-about-us .approaches-container .vision__description,
 .page-about-us .approaches-container .values__description {
-  color: #343a40;
-  font-size: 1rem;
+  color: #f8f9fa;
+  font-size: 1.25rem;
   font-weight: 400;
   text-align: justify;
 }
