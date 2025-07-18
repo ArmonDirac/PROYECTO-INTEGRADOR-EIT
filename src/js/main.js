@@ -1,6 +1,5 @@
-const articleSample = document.querySelector("#items");
-const groupUnderPromotion = document.querySelector("#promotedCards")
-const articlesUnderPromotion = document.querySelector("#promotedCard")
+const articleSample = document.querySelector("#normalCard");
+const articlesUnderPromotion = document.querySelector("#promotedCard");
 
 const createProduct = (nombre, archivo, serial, descripcion, precio, destacado) => ({
             productName: nombre ,
@@ -29,12 +28,13 @@ const products =
     ];
 
 for (let i = 0; i < products.length; i++) {
-    if (products[i].productPromoted==true){
-    articlesUnderPromotion.innerHTML += '<div class="card"><img class="card__image" src="./assets/images/products/'+products[i].productImage+ '" alt="Imagen de producto"> <h3 class="card__title">'+products[i].productName+'</h3> <span class="card__code">'+products[i].productSerial+'</span><p class="card__description">'+products[i].productDescription+'</p><span class="card__price">USD '+products[i].productPrice+'</span><div class="card__actions"><button class="button button--add">Agregar al carrito</button><span class="card__counter">0</span><button class="button button--remove">Quitar del carrito</button></div></div>';
+    articleSample.innerHTML += '<div class="card"><img class="card__image" src="./assets/images/products/'+products[i].productImage+ '" alt="Imagen de producto"> <h3 class="card__title">'+products[i].productName+'</h3> <span class="card__code">'+products[i].productSerial+'</span><p class="card__description">'+products[i].productDescription+'</p><span class="card__price">USD '+products[i].productPrice+'</span><div class="card__actions"><button class="button button--add">Agregar al carrito</button><span class="card__counter">0</span><button class="button button--remove">Quitar del carrito</button></div></div>'
     }
-    };
 for (let i = 0; i < products.length; i++) {
-    articleSample.innerHTML += '<div class="card"><img class="card__image" src="./assets/images/products/'+products[i].productImage+ '" alt="Imagen de producto"> <h3 class="card__title">'+products[i].productName+'</h3> <span class="card__code">'+products[i].productSerial+'</span><p class="card__description">'+products[i].productDescription+'</p><span class="card__price">USD '+products[i].productPrice+'</span><div class="card__actions"><button class="button button--add">Agregar al carrito</button><span class="card__counter">0</span><button class="button button--remove">Quitar del carrito</button></div></div>';
-}
+    if (products[i].productPromoted==true){
+    articlesUnderPromotion.innerHTML += '<div class="card"><img class="card__image" src="./assets/images/products/'+products[i].productImage+ '" alt="Imagen de producto"> <h3 class="card__title">'+products[i].productName+'</h3> <span class="card__code">'+products[i].productSerial+'</span><p class="card__description">'+products[i].productDescription+'</p><span class="card__price">USD '+products[i].productPrice+'</span><div class="card__actions"><button class="button button--add">Agregar al carrito</button><span class="card__counter">0</span><button class="button button--remove">Quitar del carrito</button></div></div>'
+    }
+    }
+
 
 
