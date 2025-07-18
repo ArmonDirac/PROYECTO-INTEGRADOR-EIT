@@ -18,10 +18,13 @@
             }
         }
     }
-
     .gallery {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: var.$spacing-md;
+        &#promotedCard {
+            background-color: $color-warning-500;
+        }
+
     }
 }

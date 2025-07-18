@@ -331,3 +331,10 @@ nav .navbar__item:hover, nav .navbar__item--active {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
 }
+
+.page-products .gallery #promotedCard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  background-color: #ffb93f ;
+}
