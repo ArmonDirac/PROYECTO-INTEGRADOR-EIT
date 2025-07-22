@@ -1,30 +1,31 @@
 
-    function createRequestedCounter() {
-      let counter = 1;
+    function createQuantityCounter() {
+      let quantity = 0; // Estado inicial del contador
 
-      function updateQuantity() {
-        document.querySelector('.card__counter').value = counter;
+      function updateDisplay() {
+        document.querySelector('.card__counter').value = quantity;
       }
 
       return {
         increment: function() {
-          counter++;
-          updateQuantity();
+          quantity++;
+          updateDisplay();
         },
         decrement: function() {
-            if (counter>=0) {
-            counter--;
-            updateQuantity();
-            }
+          if (quantity > 0) { // Evita que baje de 1
+            quantity--;
+            updateDisplay();
+          }
         },
-        getCounter: function() {
-          return counter;
+        getQuantity: function() {
+          return quantity;
         }
       };
     }
 
-    const counter = createRequestedCounter();
+    // Crear una instancia del closure
+    const counter = createQuantityCounter();
 
-    document.querySelector('.button button--add').addEventListener('click', counter.increment);
-    document.querySelector('.button button--remove').addEventListener('click', counter.decrement);
-
+    // Asignar eventos a los botones
+    document.querySelector('.button--add').addEventListener('click', counter.increment);
+    document.querySelector('.button--remove').addEventListener('click', counter.decrement);
