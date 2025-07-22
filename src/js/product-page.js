@@ -1,6 +1,6 @@
 
     function createQuantityCounter() {
-      let quantity = 0; // Estado inicial del contador
+      let quantity = 0;
 
       function updateDisplay() {
         document.querySelector('.card__counter').value = quantity;
@@ -12,7 +12,7 @@
           updateDisplay();
         },
         decrement: function() {
-          if (quantity > 0) { // Evita que baje de 1
+          if (quantity > 0) { 
             quantity--;
             updateDisplay();
           }
@@ -23,9 +23,9 @@
       };
     }
 
-    // Crear una instancia del closure
+
     const counter = createQuantityCounter();
 
-    // Asignar eventos a los botones
+
     document.querySelector('.button--add').addEventListener('click', counter.increment);
     document.querySelector('.button--remove').addEventListener('click', counter.decrement);
