@@ -27,14 +27,13 @@ const products =
     createProduct("IndustroArm Elite","product13.jpg","000013","Maximiza la productividad con el IndustroArm Elite, un brazo robótico de alta resistencia y precisión para industrias exigentes. ¡Con un agarre potente y diseño ergonómico, es la elección de los profesionales!",55000,false)
     ];
 
-for (let i = 0; i < products.length; i++) {
-    articleSample.innerHTML += '<div class="card"><img class="card__image" src="./assets/images/products/'+products[i].productImage+ '" alt="Imagen de producto"> <h3 class="card__title">'+products[i].productName+'</h3> <span class="card__code">'+products[i].productSerial+'</span><p class="card__description">'+products[i].productDescription+'</p><span class="card__price">USD '+products[i].productPrice+'</span><div class="card__actions"><button class="button button--add">Agregar al carrito</button><span class="card__counter">0</span><button class="button button--remove">Quitar del carrito</button></div></div>'
-    }
-for (let i = 0; i < products.length; i++) {
-    if (products[i].productPromoted==true){
-    articlesUnderPromotion.innerHTML += '<div class="card"><img class="card__image" src="./assets/images/products/'+products[i].productImage+ '" alt="Imagen de producto"> <h3 class="card__title">'+products[i].productName+'</h3> <span class="card__code">'+products[i].productSerial+'</span><p class="card__description">'+products[i].productDescription+'</p><span class="card__price">USD '+products[i].productPrice+'</span><div class="card__actions"><button class="button button--add">Agregar al carrito</button><span class="card__counter">0</span><button class="button button--remove">Quitar del carrito</button></div></div>'
-    }
-    }
+    products.forEach((product) => {
+        if (product.productPromoted && articlesUnderPromotion) {
+        articlesUnderPromotion.innerHTML += '<div class="card"><img class="card__image" src="./assets/images/products/'+product.productImage+ '" alt="Imagen de producto"> <h3 class="card__title">'+product.productName+'</h3> <span class="card__code">'+product.productSerial+'</span><p class="card__description">'+product.productDescription+'</p><span class="card__price">USD '+product.productPrice+'</span><div class="card__actions"><button class="button button--add">Agregar al carrito</button><span class="card__counter">0</span><button class="button button--remove">Quitar del carrito</button></div></div>';
+        }
+        if (articleSample) {
+        articleSample.innerHTML += '<div class="card"><img class="card__image" src="./assets/images/products/'+product.productImage+ '" alt="Imagen de producto"> <h3 class="card__title">'+product.productName+'</h3> <span class="card__code">'+product.productSerial+'</span><p class="card__description">'+product.productDescription+'</p><span class="card__price">USD '+product.productPrice+'</span><div class="card__actions"><button class="button button--add">Agregar al carrito</button><span class="card__counter">0</span><button class="button button--remove">Quitar del carrito</button></div></div>'
+        }
+    })
 
-
-
+    //document.createElement
