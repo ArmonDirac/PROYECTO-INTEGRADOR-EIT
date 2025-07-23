@@ -1,15 +1,13 @@
 @use "../abstracts/mixins" as mix;
 @use "../abstracts/variables" as var;
 
-.cards {
+.card {
     display: flex;
     flex-direction: column;
     gap: var.$spacing-md;
     border: 1px solid var.$color-primary-100;
     padding: var.$spacing-md;
     border-radius: var.$spacing-md 0 var.$spacing-md 0;
-
-    .card {
 
     &__image {
         border-top-left-radius: var.$spacing-sm;
@@ -45,5 +43,8 @@
         display: flex;
         justify-content: space-evenly;
     }
-}
+
+    &__counter {
+        width: 2px;
+    }
 }

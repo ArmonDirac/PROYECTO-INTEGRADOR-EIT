@@ -26,9 +26,6 @@ const products =
     createProduct("IndustroArm Elite","product13.jpg","000013","Maximiza la productividad con el IndustroArm Elite, un brazo robótico de alta resistencia y precisión para industrias exigentes. ¡Con un agarre potente y diseño ergonómico, es la elección de los profesionales!",55000,false)
     ];
 
-console.log(products);
-
-
 const displayCards = () => {
      const cards = document.createElement("div");
      cards.classList.add("gallery");
@@ -103,14 +100,22 @@ const productsContainer = document.getElementById("normalCard");
 productsContainer.appendChild(displayCards());
 
 
+const counter1 = createQuantityCounter();
+const counter2 = createQuantityCounter();
+const counter3 = createQuantityCounter();
+const counter4 = createQuantityCounter();
+const counter5 = createQuantityCounter();
+const counter6 = createQuantityCounter();
+const counter7 = createQuantityCounter();
+const counter8 = createQuantityCounter();
+const counter9 = createQuantityCounter();
+const counter10 = createQuantityCounter();
+const counter11 = createQuantityCounter();
+const counter12 = createQuantityCounter();
+const counter13 = createQuantityCounter();
 
-
-    const counter = createQuantityCounter();
-
-
-    document.querySelector('.button--add').addEventListener('click', counter.increment);
-    document.querySelector('.button--remove').addEventListener('click', counter.decrement);
-
+document.querySelector('.button--add').addEventListener('click', counter1.increment);
+document.querySelector('.button--remove').addEventListener('click', counter1.decrement);
 
 
 

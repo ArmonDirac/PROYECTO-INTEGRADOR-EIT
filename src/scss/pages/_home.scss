@@ -1,7 +1,7 @@
 @use "../abstracts/mixins" as mix;
 @use "../abstracts/variables" as var;
 
-.page-index {
+.page-home {
     &__head {
         display: flex;
         justify-content: space-between;
@@ -18,9 +18,9 @@
             }
         }
     }
-    .gallery {
+    .special-gallery {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: var.$spacing-md;
     }
 }
