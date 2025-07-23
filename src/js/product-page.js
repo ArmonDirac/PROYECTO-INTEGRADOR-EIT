@@ -1,11 +1,3 @@
-// const PENDING = "PENDING";
-// const CANCELLED = "CANCELLED";
-// const CONFIRMED = "CONFIRMED";
-
-// const STANDARD = "standard";
-// const DELUXE = "deluxe";
-// const SUITE = "suite";
-
 const createProduct = (nombre, archivo, serial, descripcion, precio, destacado) => ({
             productName: nombre ,
             productImage: archivo,
@@ -14,6 +6,8 @@ const createProduct = (nombre, archivo, serial, descripcion, precio, destacado) 
             productPrice: Number.parseFloat(precio),
             productPromoted: destacado
 });
+
+
 
 const products =
     [
@@ -32,158 +26,83 @@ const products =
     createProduct("IndustroArm Elite","product13.jpg","000013","Maximiza la productividad con el IndustroArm Elite, un brazo robótico de alta resistencia y precisión para industrias exigentes. ¡Con un agarre potente y diseño ergonómico, es la elección de los profesionales!",55000,false)
     ];
 
+console.log(products);
 
-
-
-
-
-// const reservations = [
-//     ["Juan A. Perez", STANDARD, 101, "10/01/2024", 28444777, PENDING, false],
-//     ["Anthony Thomas", DELUXE, 102, "15/01/2024", 50788955,CONFIRMED, true],
-//     ["Lorena Medina", STANDARD, 103, "20/01/2024", 74111000,CANCELLED,false],
-//     ["Patricia Fuentes", SUITE, 105,"25/01/2024",9258258,CONFIRMED,false],
-//     ["Javier G. Torres", STANDARD, 106, "25/01/2024",75444888,CONFIRMED,false],
-//     ["Max Power", SUITE, 108,"15/01/2024",28555888,CANCELLED,true],
-//     ["Marian Sans", DELUXE,107,"12/01/2024", 32588255,PENDING,false],
-//     ["Clara Ponce", DELUXE,109,"18/02/2024",60155000,CONFIRMED,false],
-//     ["Carla Blanco", STANDARD,100,"05/03/2024", 40177070,PENDING,true]
-// ];
-
-<div class="card">
-<img class="card__image" src="./assets/images/products/'+product.productImage+ '" alt="Imagen de producto">
-<h3 class="card__title">'+product.productName+'</h3>
-<span class="card__code">'+product.productSerial+'</span>
-<p class="card__description">'+product.productDescription+'</p>
-<span class="card__price">USD '+product.productPrice+'</span>
-<div class="card__actions"><button class="button button--add">Agregar al carrito</button>
-<input class="card__counter" value="0"></input>
-<button class="button button--remove">Quitar del carrito</button></div></div>
 
 const displayCards = () => {
      const cards = document.createElement("div");
-     cards.classList.add("card");
+     cards.classList.add("gallery");
      products.forEach((product) => {
      const card = document.createElement("div");
-     const image = document.createElement("img");
-     image.setAttribute("src", `src/assets/images/products/${productImage}`)
      card.classList.add("card");
-     image.classList.add("card-image");
+     const image = document.createElement("img");
+     image.setAttribute("src", "./assets/images/products/"+product.productImage);
+     image.setAttribute("alt", "Imagen de producto"+product.productSerial);
+     const title = document.createElement("h3");
+     title.classList.add("card__title");
+     title.innerHTML += product.productName;
+     const code = document.createElement("span");
+     code.classList.add("card__code");
+     code.innerHTML += product.productSerial;
+     const description = document.createElement("p");
+     description.classList.add("card__description");
+     description.innerHTML += product.productDescription;
+     const price = document.createElement("span");
+     price.classList.add("card__price");
+     price.innerHTML += 'USD '+product.productPrice;
+     const action = document.createElement("div");
+     action.classList.add("card__action");
+     const buttonAdd = document.createElement("button");
+     buttonAdd.classList.add("button--add");
+     buttonAdd.innerHTML += 'Agregar al carrito';
+     const quantity = document.createElement("input");
+     quantity.classList.add("card__counter");
+     quantity.setAttribute('value','0');
+     const buttonMinus = document.createElement("button");
+     buttonMinus.classList.add("button--remove");
+     buttonMinus.innerHTML += 'Quitar del carrito';
      card.appendChild(image);
-     const data = document.createElement("div");
-     data.innerHTML += `<p></p>`;
-     data.innerHTML += `<p><strong>Nombre del Huesped</strong>: ${reservation[0]} <strong>Número de pasaporte</strong>: ${reservation[4]}</p>`;
-     data.innerHTML += `<p><strong>Tipo y número de habitación</strong>: ${reservation[1]} N° ${reservation[2] } </p>`;
-     data.innerHTML += `<p><strong>Fecha de Ingreso</strong>: ${reservation[3]}</p>`;
-     data.innerHTML += `<p><strong>Estado actual de la reserva</strong>: ${reservation[5]}</p>`;
-
-//         if (reservation[6] == true) {
-//             data.innerHTML += `<p><strong>VIP</strong></p>`;
-//         }
-//         if (reservation[5] == "CANCELLED") {
-//             card.classList.add("reservation-card-cancelled");
-//         }
-//         if (reservation[5] == "CONFIRMED") {
-//             card.classList.add("reservation-card-confirmed");
-//         }
-
-//         card.appendChild(data);
-//         cards.appendChild(card);
-//     });
-
-//     return cards;
-// };
-
-// const reservationsContainer = document.getElementById("reservation-container");
-
-// reservationsContainer.innerHTML += "<h2>Gestión de Reservas</h2>"
-
-// const quantityPending = calculateCounter(PENDING);
-// const quantityCancelled = calculateCounter(CANCELLED);
-// const quantityConfirmed = calculateCounter(CONFIRMED);
-// reservationsContainer.appendChild(displayCounters(quantityPending,quantityCancelled,quantityConfirmed));
-// reservationsContainer.innerHTML += "<h3>Lista de Reservas</h3>"
-// reservationsContainer.appendChild(displayCards());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    function createQuantityCounter() {
-      let quantity = 0;
+     card.appendChild(title);
+     card.appendChild(code);
+     card.appendChild(description);
+     card.appendChild(price);
+     card.appendChild(action);
+     action.appendChild(buttonAdd);
+     action.appendChild(quantity);
+     action.appendChild(buttonMinus);
+     cards.appendChild(card);
+})
+     return cards;
+}
+
+function createQuantityCounter() {
+      let qty = 0;
 
       function updateDisplay() {
-        document.querySelector('.card__counter').value = quantity;
+        document.querySelector('.card__counter').value = qty;
       }
 
       return {
         increment: function() {
-          quantity++;
+          qty++;
           updateDisplay();
         },
         decrement: function() {
-          if (quantity > 0) { 
-            quantity--;
+          if (qty > 0) {
+            qty--;
             updateDisplay();
           }
         },
         getQuantity: function() {
-          return quantity;
+          return qty;
         }
       };
     }
+
+const productsContainer = document.getElementById("normalCard");
+productsContainer.appendChild(displayCards());
+
+
 
 
     const counter = createQuantityCounter();
@@ -191,3 +110,7 @@ const displayCards = () => {
 
     document.querySelector('.button--add').addEventListener('click', counter.increment);
     document.querySelector('.button--remove').addEventListener('click', counter.decrement);
+
+
+
+
