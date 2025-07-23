@@ -332,7 +332,7 @@ nav .navbar__item:hover, nav .navbar__item--active {
   gap: 1rem;
 }
 
-.page-products .gallery #promotedCard {
+.special-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
