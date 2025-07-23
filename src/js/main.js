@@ -26,12 +26,13 @@ const products =
     createProduct("IndustroArm Elite","product13.jpg","000013","Maximiza la productividad con el IndustroArm Elite, un brazo robótico de alta resistencia y precisión para industrias exigentes. ¡Con un agarre potente y diseño ergonómico, es la elección de los profesionales!",55000,false)
     ];
 
-const highlightedProducts = 
 
 const displayCards = () => {
      const cards = document.createElement("div");
-     cards.classList.add("special-gallery");
+     cards.classList.add("gallery");
+     cards.setAttribute("id","#highlighted");
      products.forEach((product) => {
+     if (product.productPromoted==true) {
      const card = document.createElement("div");
      card.classList.add("card");
      const image = document.createElement("img");
@@ -70,6 +71,7 @@ const displayCards = () => {
      action.appendChild(quantity);
      action.appendChild(buttonMinus);
      cards.appendChild(card);
+     }
 })
      return cards;
 }

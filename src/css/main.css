@@ -332,9 +332,8 @@ nav .navbar__item:hover, nav .navbar__item--active {
   gap: 1rem;
 }
 
-.special-gallery {
+.page-products .gallery, #highlighted{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
-  background-color: #ffb93f ;
 }
