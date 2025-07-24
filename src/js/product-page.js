@@ -1,4 +1,3 @@
-
 const products = [
   {
     productName: "Ciberhead-500",
@@ -106,11 +105,11 @@ const products = [
   }
 ];
 
-const displayCards = () => {
+const displayCards = (productsList = products) => {
   const cards = document.createElement("div");
   cards.classList.add("gallery");
 
-  products.forEach((product) => {
+  productsList.forEach((product) => {
     const card = document.createElement("div");
     card.classList.add("card");
 
@@ -164,7 +163,6 @@ const displayCards = () => {
   return cards;
 };
 
-
 function createQuantityCounter() {
   let qty = 0;
 
@@ -189,7 +187,6 @@ function createQuantityCounter() {
   };
 }
 
-
 const initializeCounters = () => {
   const cards = document.querySelectorAll(".card");
   cards.forEach((card) => {
@@ -203,9 +200,42 @@ const initializeCounters = () => {
   });
 };
 
+document.addEventListener('DOMContentLoaded', () => {
+  const searchInput = document.querySelector('.searcher__word');
+  const searchButton = document.querySelector('.button--search');
+  const productsContainer = document.getElementById('normalCard');
 
 
-const productsContainer = document.getElementById("normalCard");
-productsContainer.appendChild(displayCards());
-initializeCounters();
+  productsContainer.appendChild(displayCards());
+  initializeCounters();
 
+
+  searchButton.addEventListener('click', () => {
+    const searchTerm = searchInput.value.trim().toLowerCase();
+
+
+    productsContainer.innerHTML = '';
+
+    if (searchTerm === '') {
+      productsContainer.appendChild(displayCards());
+      initializeCounters();
+      return;
+    }
+
+
+    const filteredProducts = products.filter(product => 
+      product.productName.toLowerCase().includes(searchTerm) ||
+      product.productDescription.toLowerCase().includes(searchTerm) ||
+      product.productSerial.toLowerCase().includes(searchTerm)
+    );
+
+    if (filteredProducts.length === 0) {
+      productsContainer.innerHTML = '<p>No se encontraron productos.</p>';
+      return;
+    }
+
+
+    productsContainer.appendChild(displayCards(filteredProducts));
+    initializeCounters();
+  });
+});
