@@ -106,14 +106,6 @@ const products = [
   }
 ];
 
-fetch("./products.json")
-  .then((response) => response.json())
-  .then((data) => {
-    products = data;
-    productsContainer.appendChild(displayCards());
-    initializeCounters();
-  });
-
 const displayCards = () => {
   const cards = document.createElement("div");
   cards.classList.add("gallery");
