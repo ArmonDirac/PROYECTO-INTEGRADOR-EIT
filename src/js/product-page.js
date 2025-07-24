@@ -189,7 +189,7 @@ function createQuantityCounter() {
   };
 }
 
-// Inicializar contadores para cada tarjeta
+
 const initializeCounters = () => {
   const cards = document.querySelectorAll(".card");
   cards.forEach((card) => {
