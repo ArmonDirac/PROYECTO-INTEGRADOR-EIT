@@ -65,9 +65,15 @@ img {
   color: #fdf7f3;
   text-align: center;
 }
-.card__actions {
+.card__action {
   display: flex;
   justify-content: space-evenly;
+}
+
+.card__counter {
+  display: flex;
+  width: 10%;
+  text-align: center;
 }
 
 .slider {

@@ -48,3 +48,99 @@
         width: 2px;
     }
 }
+//
+// .card {
+//     display: flex;
+//     flex-direction: column;
+//     gap: var.$spacing-md;
+//     border: 1px solid var.$color-primary-100;
+//     padding: var.$spacing-md;
+//     border-radius: var.$spacing-md 0 var.$spacing-md 0;
+
+//     &__image {
+//         border-top-left-radius: var.$spacing-sm;
+//         position: relative; // Necesario para posicionar elementos absolutos dentro
+//         width: 100%;
+//         height: auto;
+//     }
+
+//     &__title {
+//         font-size: var.$font-size-md;
+//         font-weight: var.$font-weight-bold;
+//         color: var.$color-primary-100;
+//     }
+
+//     &__code {
+//         font-size: var.$font-size-xs;
+//         color: var.$color-primary-100;
+//         text-align: right;
+//     }
+
+//     &__description {
+//         font-size: var.$font-size-md;
+//         color: var.$color-primary-100;
+//         @include mix.text-ellipsis();
+//         text-align: justify;
+//     }
+
+//     &__price {
+//         font-size: var.$font-size-md;
+//         font-weight: var.$font-weight-bold;
+//         color: var.$color-primary-100;
+//         text-align: center;
+//     }
+
+//     &__actions {
+//         display: flex;
+//         justify-content: space-evenly;
+//     }
+
+//     &__counter {
+//         width: 3rem; // Ancho reducido pero funcional para el input
+//         text-align: center;
+//     }
+// }
+
+// // Estilos específicos para tarjetas dentro de #highlightedProducts
+// #highlightedProducts .card {
+//     position: relative; // Contexto para posicionamiento absoluto
+
+//     &__image {
+//         z-index: 1; // Imagen en la capa base
+//     }
+
+//     &__title,
+//     &__description {
+//         position: absolute; // Posicionar sobre la imagen
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         z-index: 2; // Enc1ima de la imagen
+//         background: rgba(0, 0, 0, 0.5); // Fondo semi-transparente para legibilidad
+//         color: white; // Color claro para contraste
+//         padding: var.$spacing-sm;
+//         margin: 0;
+//         text-align: center;
+//         opacity: 0.8; // Efecto de marca de agua
+//     }
+
+//     &__title {
+//         top: 10%; // Posicionar el título más arriba
+//         font-size: var.$font-size-lg; // Ligeramente más grande para destacar
+//     }
+
+//     &__description {
+//         top: 30%; // Posicionar la descripción debajo del título
+//         font-size: var.$font-size-sm; // Más pequeño para ajustarse
+//         line-height: 1.2; // Mejor legibilidad
+//         padding: var.$spacing-md;
+//     }
+
+//     // Ajustar el resto de los elementos para que no se superpongan
+//     &__code,
+//     &__price,
+//     &__actions {
+//         position: relative;
+//         z-index: 3; // Asegurar que estén sobre la imagen y el texto
+//     }
+// }
