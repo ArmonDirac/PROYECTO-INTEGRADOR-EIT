@@ -1,7 +1,7 @@
 @use "../abstracts/mixins" as mix;
 @use "../abstracts/variables" as var;
 
-.card {
+.card  {
     display: flex;
     flex-direction: column;
     gap: var.$spacing-md;
@@ -47,4 +47,5 @@
     &__counter {
         width: 33%;
     }
+
 }

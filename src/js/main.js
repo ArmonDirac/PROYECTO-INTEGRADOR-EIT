@@ -108,7 +108,6 @@ const products = [
 const displayCards = () => {
   const cards = document.createElement("div");
   cards.classList.add("gallery");
-  cards.setAttribute("id","#highlighted");
 
   products.forEach((product) => {
   if (product.productPromoted==true) {
@@ -119,6 +118,10 @@ const displayCards = () => {
     image.setAttribute("src", `./assets/images/products/${product.productImage}`);
     image.setAttribute("alt", `Imagen de producto ${product.productSerial}`);
 
+    const watermark = document.createElement("p");
+    watermark.classList.add("card__watermark");
+    watermark.innerHTML = "PRODUCTO DESTACADO";
+    
     const title = document.createElement("h3");
     title.classList.add("card__title");
     title.innerHTML = product.productName;
@@ -136,6 +139,7 @@ const displayCards = () => {
     price.innerHTML = `USD ${product.productPrice}`;
 
     card.appendChild(image);
+    card.appendChild(watermark);
     card.appendChild(title);
     card.appendChild(code);
     card.appendChild(description);
