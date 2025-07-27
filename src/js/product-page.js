@@ -129,6 +129,14 @@ const displayCards = (productsList = products) => {
     description.classList.add("card__description");
     description.innerHTML = product.productDescription;
 
+    const showMore = document.createElement("label");
+    showMore.classList.add("show-more");
+    showMore.innerHTML = "Ver más";
+
+    const showLess = document.createElement("label");
+    showLess.classList.add("show-less");
+    showLess.innerHTML = "Ver menos";
+
     const price = document.createElement("span");
     price.classList.add("card__price");
     price.innerHTML = `USD ${product.productPrice}`;
@@ -152,6 +160,8 @@ const displayCards = (productsList = products) => {
     card.appendChild(title);
     card.appendChild(code);
     card.appendChild(description);
+    card.appendChild(showMore);
+    card.appendChild(showLess);
     card.appendChild(price);
     card.appendChild(action);
     action.appendChild(buttonAdd);

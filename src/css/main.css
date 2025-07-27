@@ -71,6 +71,11 @@ img {
 .card__counter {
   width: 33%;
 }
+.card__watermark {
+  position: float;
+  background-color: #fdf7f3;
+  text-align: center;
+}
 
 .slider {
   position: relative;
@@ -269,8 +274,27 @@ nav .navbar__item:hover, nav .navbar__item--active {
 }
 .page-index .gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
+}
+@media (min-width: 480px) {
+  .page-index .gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .page-index .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .page-index .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .page-index .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .page-about-us .approaches-container {
@@ -353,6 +377,25 @@ nav .navbar__item:hover, nav .navbar__item--active {
 }
 .page-products .gallery {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+}
+@media (min-width: 480px) {
+  .page-products .gallery {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .page-products .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .page-products .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1200px) {
+  .page-products .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
