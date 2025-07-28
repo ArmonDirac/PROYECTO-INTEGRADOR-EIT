@@ -113,6 +113,11 @@ const displayCards = (productsList = products) => {
     const card = document.createElement("div");
     card.classList.add("card");
 
+    const modal_check = document.createElement("input");
+    modal_check.setAttribute("hidden");
+    modal_check.setAttribute("type","checkbox");
+    modal_check.setAttribute("id","modal-toggle");
+
     const image = document.createElement("img");
     image.setAttribute("src", `./assets/images/products/${product.productImage}`);
     image.setAttribute("alt", `Imagen de producto ${product.productSerial}`);
@@ -131,10 +136,12 @@ const displayCards = (productsList = products) => {
 
     const showMore = document.createElement("label");
     showMore.classList.add("show-more");
+    showMore.setAttribute("for","modal-toggle")
     showMore.innerHTML = "Ver más";
 
     const showLess = document.createElement("label");
     showLess.classList.add("show-less");
+    showMore.setAttribute("for","modal-toggle")
     showLess.innerHTML = "Ver menos";
 
     const price = document.createElement("span");
@@ -162,6 +169,7 @@ const displayCards = (productsList = products) => {
     card.appendChild(description);
     card.appendChild(showMore);
     card.appendChild(showLess);
+    card.appendChild(modal_check);
     card.appendChild(price);
     card.appendChild(action);
     action.appendChild(buttonAdd);

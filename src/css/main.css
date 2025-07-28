@@ -59,6 +59,28 @@ img {
   word-break: break-word;
   text-align: justify;
 }
+.card .show-less:hover, .card .show-more:hover {
+  font-weight: bold;
+}
+.card .show-more {
+  color: #fdf7f3;
+  display: flex;
+}
+.card .show-less {
+  color: #fdf7f3;
+  display: none;
+}
+.card .__description {
+  -webkit-line-clamp: none;
+  line-clamp: none;
+  overflow: visible;
+}
+.card #modal-toggle:checked ~ .show-less {
+  display: flex;
+}
+.card #modal-toggle:checked ~ .show-more {
+  display: none;
+}
 .card__price {
   font-size: 1rem;
   font-weight: 700;
