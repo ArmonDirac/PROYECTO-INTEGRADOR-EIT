@@ -163,6 +163,15 @@ const displayCards = (productsList = products) => {
     buttonMinus.classList.add("button--remove");
     buttonMinus.innerHTML = "Quitar del carrito";
 
+
+    modal_check.addEventListener("change", () => {
+      if (modal_check.checked) {
+        card.classList.add("modal-active");
+      } else {
+        card.classList.remove("modal-active");
+      }
+    });
+
     card.appendChild(image);
     card.appendChild(title);
     card.appendChild(code);
@@ -223,14 +232,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchButton = document.querySelector('.button--search');
   const productsContainer = document.getElementById('normalCard');
 
-
   productsContainer.appendChild(displayCards());
   initializeCounters();
 
-
   searchButton.addEventListener('click', () => {
     const searchTerm = searchInput.value.trim().toLowerCase();
-
 
     productsContainer.innerHTML = '';
 
@@ -239,7 +245,6 @@ document.addEventListener('DOMContentLoaded', () => {
       initializeCounters();
       return;
     }
-
 
     const filteredProducts = products.filter(product => 
       product.productName.toLowerCase().includes(searchTerm) ||
@@ -251,7 +256,6 @@ document.addEventListener('DOMContentLoaded', () => {
       productsContainer.innerHTML = '<p>No se encontraron productos.</p>';
       return;
     }
-
 
     productsContainer.appendChild(displayCards(filteredProducts));
     initializeCounters();

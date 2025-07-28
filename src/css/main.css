@@ -32,9 +32,14 @@ img {
   border: 1px solid #fdf7f3;
   padding: 1rem;
   border-radius: 1rem 0 1rem 0;
+  min-height: 0;
+  height: auto;
+  overflow: visible;
 }
 .card__image {
   border-top-left-radius: 0.5rem;
+  width: 100%;
+  height: auto;
 }
 .card__title {
   font-size: 1rem;
@@ -49,6 +54,7 @@ img {
 .card__description {
   font-size: 1rem;
   color: #fdf7f3;
+  text-align: justify;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
@@ -57,29 +63,35 @@ img {
   overflow: hidden;
   max-height: 4.2em;
   word-break: break-word;
-  text-align: justify;
+  transition: max-height 0.3s ease;
 }
-.card .show-less:hover, .card .show-more:hover {
+.card .show-more,
+.card .show-less {
+  color: #fdf7f3;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.card .show-more:hover,
+.card .show-less:hover {
   font-weight: bold;
 }
 .card .show-more {
-  color: #fdf7f3;
-  display: flex;
+  display: block;
 }
 .card .show-less {
-  color: #fdf7f3;
   display: none;
 }
-.card .__description {
-  -webkit-line-clamp: none;
-  line-clamp: none;
+.card.modal-active .card__description {
+  -webkit-line-clamp: unset;
+  line-clamp: unset;
+  max-height: 50em;
   overflow: visible;
 }
-.card #modal-toggle:checked ~ .show-less {
-  display: flex;
-}
-.card #modal-toggle:checked ~ .show-more {
+.card.modal-active .show-more {
   display: none;
+}
+.card.modal-active .show-less {
+  display: block;
 }
 .card__price {
   font-size: 1rem;
@@ -87,14 +99,15 @@ img {
   color: #fdf7f3;
   text-align: center;
 }
-.card__actions {
+.card__action {
+  display: flex;
   justify-content: space-evenly;
 }
 .card__counter {
   width: 33%;
 }
 .card__watermark {
-  position: float;
+  position: relative;
   background-color: #fdf7f3;
   text-align: center;
 }
@@ -400,6 +413,8 @@ nav .navbar__item:hover, nav .navbar__item--active {
 .page-products .gallery {
   display: grid;
   gap: 1rem;
+  height: auto;
+  overflow: visible;
 }
 @media (min-width: 480px) {
   .page-products .gallery {

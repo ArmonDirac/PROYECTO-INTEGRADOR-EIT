@@ -2,43 +2,42 @@
 @use "../abstracts/variables" as var;
 
 .page-products {
-    &__head {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-        .searcher {
-            &__word {
-                font-size: var.$font-size-md;
-                font-weight: var.$font-weight-regular;
-                color: var.$color-neutro-900;
-
-                border-radius: 0.5rem 0 0 0.5rem;
-                padding: var.$spacing-xs;
-            }
-        }
+    .searcher {
+      &__word {
+        font-size: var.$font-size-md;
+        font-weight: var.$font-weight-regular;
+        color: var.$color-neutro-900;
+        border-radius: 0.5rem 0 0 0.5rem;
+        padding: var.$spacing-xs;
+      }
     }
-    .gallery {
-        display: grid;
-        gap: var.$spacing-md;
+  }
 
+  .gallery {
+    display: grid;
+    gap: var.$spacing-md;
+    height: auto; 
+    overflow: visible; 
 
-        @media (min-width: var.$breakpoint-mobile) {
-            grid-template-columns: repeat(1, 1fr);
-        }
-
-        @media (min-width: var.$breakpoint-tablet) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @media (min-width: var.$breakpoint-netbook) {
-            grid-template-columns: repeat(3, 1fr);
-        }
-
-        @media (min-width: var.$breakpoint-desktop) {
-            grid-template-columns: repeat(4, 1fr);
-        }
-
-
+    @media (min-width: var.$breakpoint-mobile) {
+      grid-template-columns: repeat(1, 1fr);
     }
+
+    @media (min-width: var.$breakpoint-tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: var.$breakpoint-netbook) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: var.$breakpoint-desktop) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
 }
