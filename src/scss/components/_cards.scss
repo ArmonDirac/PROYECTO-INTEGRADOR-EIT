@@ -30,69 +30,45 @@
         color: var.$color-primary-100;
         @include mix.text-ellipsis();
         text-align: justify;
+        -webkit-line-clamp: none;
+        line-clamp: none;
+        overflow: visible;
     }
 
-    .show-less:hover, .show-more:hover  {
+ .show-more,
+  .show-less {
+    color: var.$color-primary-100;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .show-more:hover,
+  .show-less:hover {
     font-weight: bold;
-}
+  }
 
-    .show-more {
-        color: var.$color-primary-100;
-        display: flex;
-    }
+  .show-more {
+    display: block; // Mostrar por defecto
+  }
 
-    .show-less {
-        color: var.$color-primary-100;
-        display: none;
-    }
+  .show-less {
+    display: none; // Oculto por defecto
+  }
 
-    .__description
-// #modal-toggle2:checked~.modal-content2,
-// #modal-toggle3:checked~.modal-content3,
-// #modal-toggle4:checked~.modal-content4,
-// #modal-toggle5:checked~.modal-content5,
-// #modal-toggle6:checked~.modal-content6,
-// #modal-toggle7:checked~.modal-content7,
-// #modal-toggle8:checked~.modal-content8,
-// #modal-toggle9:checked~.modal-content9,
-// #modal-toggle10:checked~.modal-content10,
-// #modal-toggle11:checked~.modal-content11 
-{
-    -webkit-line-clamp: none;
-    line-clamp: none;
+  // Cuando el checkbox está marcado
+  input[type="checkbox"]:checked ~ .card__description {
+    @include mix.text-ellipsis($enabled: false); // Desactiva el ellipsis
+    max-height: 20em; // Altura suficiente para mostrar todo el texto
     overflow: visible;
-}
+  }
 
-#modal-toggle:checked~.show-less
-// #modal-toggle2:checked~.show-less,
-// #modal-toggle3:checked~.show-less,
-// #modal-toggle4:checked~.show-less,
-// #modal-toggle5:checked~.show-less,
-// #modal-toggle6:checked~.show-less,
-// #modal-toggle7:checked~.show-less,
-// #modal-toggle8:checked~.show-less,
-// #modal-toggle9:checked~.show-less,
-// #modal-toggle10:checked~.show-less,
-// #modal-toggle11:checked~.show-less 
-{
-    display: flex;
-}
+  input[type="checkbox"]:checked ~ .show-more {
+    display: none; // Oculta "Ver más"
+  }
 
-#modal-toggle:checked~.show-more
-// #modal-toggle2:checked~.show-more,
-// #modal-toggle3:checked~.show-more,
-// #modal-toggle4:checked~.show-more,
-// #modal-toggle5:checked~.show-more,
-// #modal-toggle6:checked~.show-more,
-// #modal-toggle7:checked~.show-more,
-// #modal-toggle8:checked~.show-more,
-// #modal-toggle9:checked~.show-more,
-// #modal-toggle10:checked~.show-more,
-// #modal-toggle11:checked~.show-more  
-
-{
-    display: none;
-}
+  input[type="checkbox"]:checked ~ .show-less {
+    display: block; // Muestra "Ver menos"
+  }
 
     &__price {
         font-size: var.$font-size-md;
