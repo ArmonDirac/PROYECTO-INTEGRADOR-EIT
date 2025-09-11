@@ -1,4 +1,6 @@
-import { loremTmp } from "./data/lorem.tmp.js";
+import { missionTmp } from "./data/mission.tmp.js";
+import { valuesTmp } from "./data/values.tmp.js";
+import { visionTmp } from "./data/vision.tmp.js";
 
 const KEY_INSTITUTION = "institution";
 
@@ -9,9 +11,9 @@ const initialize = () => {
         phone: "264-411-2233",
         email: "info@miapp.com",
         about: {
-            mission: loremTmp,
-            vision: loremTmp,
-            values: loremTmp,
+            mission: missionTmp,
+            vision: visionTmp,
+            values: valuesTmp,
         },
     };
 
