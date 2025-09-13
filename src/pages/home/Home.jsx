@@ -8,9 +8,9 @@ import HomeHighlightedProductCard from "./home-highlighted-product-card/HomeHigh
 const Home = () => {
     return (
         <div className="home">
-            <Text variant="h2">Bienvenidos a Armon Dirac</Text>
-            <HomeHighlightedParagraph/>
+            <Text className="home__title" variant="h2">Bienvenidos a Armon Dirac</Text>
             <HomeSlider/>
+            <HomeHighlightedParagraph/>
             <HomeHighlightedProducts/>
             <HomeHighlightedProductCard/>
         </div>

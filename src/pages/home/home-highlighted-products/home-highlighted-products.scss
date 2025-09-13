@@ -1,3 +1,6 @@
+@use "@/scss/variables" as var;
+
 .home-highlighted-products {
+    grid-area: "products";
     background-color: green;
 }

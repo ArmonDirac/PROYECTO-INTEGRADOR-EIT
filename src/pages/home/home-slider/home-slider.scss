@@ -1,3 +1,6 @@
+@use "@/scss/variables" as var;
+
 .home-slider {
+    grid-area: "slider";
     background-color: pink;
 }

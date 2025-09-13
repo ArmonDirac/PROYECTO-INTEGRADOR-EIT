@@ -1,3 +1,6 @@
+@use "@/scss/variables" as var;
+
 .home-highlighted-paragraph {
+    grid-area: "paragraph";
     background-color: red;
 }
