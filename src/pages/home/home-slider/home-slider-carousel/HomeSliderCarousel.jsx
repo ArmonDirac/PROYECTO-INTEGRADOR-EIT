@@ -1,9 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
 import { Box } from "@mui/material";
-import slider1Image from "@/public/images/slider/slide1.jpg";
-import slider2Image from "@/public/images/slider/slide2.jpg";
-import slider3Image from "@/public/images/slider/slide3.jpg";
+import slider1Image from "@/../public/images/slider/slide1.jpg";
+import slider2Image from "@/../public/images/slider/slide2.jpg";
+import slider3Image from "@/../public/images/slider/slide3.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "@/pages/home/home-slider/home-slider-carousel/home-slider-carousel.scss";

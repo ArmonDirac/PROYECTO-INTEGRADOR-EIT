@@ -1,5 +1,5 @@
 import { Text } from "@/components/texts";
-import logoImage from "@/public/images/logo.svg";
+import logoImage from "@/../public/images/logo.svg";
 import PropTypes from "prop-types";
 import "./institution-logo.scss";
 

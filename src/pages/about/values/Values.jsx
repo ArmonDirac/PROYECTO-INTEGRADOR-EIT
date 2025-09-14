@@ -1,6 +1,6 @@
 import { Text } from "@/components/texts";
 import AppContext from "@/contexts/AppContext";
-import valuesImage from "@/public/images/about/values.jpg";
+import valuesImage from "@/../public/images/about/values.jpg";
 import { useContext } from "react";
 import "./values.scss";
 

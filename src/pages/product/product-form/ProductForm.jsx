@@ -22,7 +22,7 @@ const ProductForm = (props) => {
 
             <img
                 className="product-form__image"
-                src={`/src/public/images/products/${formik.values.thumbnail}`}
+                src={`@/../public/images/products/${formik.values.thumbnail}`}
                 alt="Imagen del producto" />
 
             <div className="product-form__actions">
