@@ -16,24 +16,35 @@ const useProductForm = (idProduct) => {
         validationSchema,
         validateOnChange: true,
         validateOnBlur: true,
-        onSubmit: (values) => {
-            idProduct ? updateProduct(idProduct, values) : createProduct(values);
-            setIsSubmitted(true);
-            fetchProducts();
+        onSubmit: async (values) => {
+            try {
+                if (idProduct) {
+                    await updateProduct(idProduct, values);
+                } else {
+                    await createProduct(values);
+                }
+                setIsSubmitted(true);
+                await fetchProducts(); // Actualiza la lista de productos
+            } catch (error) {
+                console.error("Error al guardar el producto:", error);
+            }
         },
     });
 
     const isSubmitDisabled = () => {
-        return isSubmitted
-            || !formik.values.name
-            || formik.values.price <= 0
-            || formik.values.stock < 0
-            || !formik.values.thumbnail
-            || !formik.isValid;
+        return (
+            isSubmitted ||
+      !formik.values.name ||
+      formik.values.price <= 0 ||
+      formik.values.stock < 0 ||
+      !formik.values.thumbnail ||
+      !formik.isValid
+        );
     };
 
     const close = () => {
         formik.resetForm();
+        setIsSubmitted(false);
         navigate("/products");
     };
 
@@ -43,24 +54,33 @@ const useProductForm = (idProduct) => {
     };
 
     const loadProduct = async (idProduct) => {
-        const product = await fetchProductById(idProduct);
-        formik.setValues(product);
+        try {
+            const product = await fetchProductById(idProduct);
+            formik.setValues({
+                name: product.name,
+                description: product.description,
+                price: product.price,
+                stock: product.stock,
+                thumbnail: product.thumbnail,
+            });
+        } catch (error) {
+            console.error("Error al cargar el producto:", error);
+        }
     };
 
     useEffect(() => {
         if (idProduct) {
             loadProduct(idProduct);
         }
-    }, [idProduct] );
+    }, [idProduct]);
 
     return {
         formik,
-        isSubmitDisabled,
         isSubmitted,
-        close,
+        isSubmitDisabled,
         cancel,
+        close,
     };
-
 };
 
 export default useProductForm;
