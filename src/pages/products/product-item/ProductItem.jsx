@@ -3,7 +3,7 @@ import { Skeleton } from "@/components/skeleton";
 import { Text } from "@/components/texts";
 import AppContext from "@/contexts/AppContext";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
+import RemoveShoppingCartIcon from "@mui/icons-material/RemoveShoppingCart";
 import { CardActionArea, Card as MuiCard } from "@mui/material";
 import PropTypes from "prop-types";
 import { useContext } from "react";
@@ -47,7 +47,7 @@ const ProductItem = (props) => {
                     <ButtonPrimary className="product-item__add" size="sm" onClick={handleAddArticle}><AddShoppingCartIcon/></ButtonPrimary>
                 </Skeleton>
                 <Skeleton className="product-item__actions--skeleton" isLoading={isLoading}>
-                    <ButtonPrimary className="product-item__remove" size="sm" onClick={handleSubtractArticle}><RemoveCircleOutlineIcon/></ButtonPrimary>
+                    <ButtonPrimary className="product-item__remove" size="sm" onClick={handleSubtractArticle}><RemoveShoppingCartIcon/></ButtonPrimary>
                 </Skeleton>
             </>
         );
@@ -73,7 +73,7 @@ const ProductItem = (props) => {
                     <Text className="product-item__description" variant="p">{product.description}</Text>
                 </Skeleton>
                 <Skeleton className="product-item__price--skeleton" isLoading={isLoading}>
-                    <Text className="product-item__price" variant="span">${product.price.toFixed(2)}</Text>
+                    <Text className="product-item__price" variant="span">USD {product.price.toFixed(2)}</Text>
                 </Skeleton>
             </div>
 

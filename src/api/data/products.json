@@ -115,5 +115,68 @@
         "price": 55000,
         "stock": 7,
         "promoted": false
+    },
+    {
+        "id": 14,
+        "name": "Auditron 4500",
+        "thumbnail": "product14.jpg",
+        "description": "Consigue las mejores revisiones de informes con el Auditron 4500, ideal para revisión contable y de variables de negocios.",
+        "price": 35000,
+        "stock": 8,
+        "promoted": false
+    },
+    {
+        "id": 15,
+        "name": "Industrial Auditron IP69K",
+        "thumbnail": "product15.jpg",
+        "description": "Misma performance que el Auditron 4500 pero con conectividad mejorada y a prueba de agua, polvo y sustancias cáusticas.",
+        "price": 18000,
+        "stock": 20,
+        "promoted": false
+    },
+    {
+        "id": 16,
+        "name": "Senior Care Companion Deluxe",
+        "thumbnail": "product16.jpg",
+        "description": "El compañero ideal para personas mayores, cocina más de 200 recetas respetando inhibiciones alimenticias especiales, capaz de hacer seguimiento a +40 abuelos y sus medicaciónes, comunicación remota aún sin señal de celulares con servicios médicos.",
+        "price": 75000,
+        "stock": 5,
+        "promoted": false
+    },
+    {
+        "id": 17,
+        "name": "Auriga Suspirante",
+        "thumbnail": "product17.jpg",
+        "description": "El mejor robot para navegación hiperespacial, capaz de manejar más de 2500 variables de posicionamiento en naves con motor suspirante, motor de salto y motor de curvatura, actualizado con astrocartografía de via láctea y nubes mayor y menor de magallanes.",
+        "price": 22000,
+        "stock": 12,
+        "promoted": true
+    },
+    {
+        "id": 18,
+        "name": "Otaku-borg",
+        "thumbnail": "product18.jpg",
+        "description": "Robot femenino japonés con capacidad de enseñar animé, japonés y cocina nipona.",
+        "price": 40000,
+        "stock": 9,
+        "promoted": false
+    },
+    {
+        "id": 19,
+        "name": "Profe-pedia",
+        "thumbnail": "product19.jpg",
+        "description": "Robot docente de STEAM: Matemática, Física, Quimica, Biología, Astrofísica e Ingeniería Hiperespacial. Compendio de las bases de datos más actualizadas.",
+        "price": 30000,
+        "stock": 15,
+        "promoted": false
+    },
+    {
+        "id": 20,
+        "name": "E-mily",
+        "thumbnail": "product20.jpg",
+        "description": "Robot de compañía para adultos.",
+        "price": 32000,
+        "stock": 10,
+        "promoted": false
     }
 ]

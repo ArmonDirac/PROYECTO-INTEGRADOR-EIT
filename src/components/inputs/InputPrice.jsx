@@ -7,7 +7,7 @@ const InputPrice = (props) => {
         formik,
         min = 0,
         step = 0.01,
-        currency = "$",
+        currency = "USD",
         ...restProps
     } = props;
 
