@@ -5,7 +5,7 @@ const InputInquiry = (props) => {
     const {
         formik,
         rows = 5,
-        maxLength = 250,
+        maxLength = 300,
         ...restProps
     } = props;
 

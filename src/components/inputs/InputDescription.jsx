@@ -5,7 +5,7 @@ const InputDescription = (props) => {
     const {
         formik,
         rows = 4,
-        maxLength = 100,
+        maxLength = 300,
         ...restProps
     } = props;
 
