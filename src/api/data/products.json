@@ -1,0 +1,119 @@
+[
+    {
+        "id": 1,
+        "name": "Ciberhead-500",
+        "thumbnail": "product01.jpg",
+        "description": "Transforma tu robot humanoide con el CyberHead X-500, una cabeza robótica de alta tecnología con sensores avanzados y un diseño futurista. Perfecta para personalización y mejoras de inteligencia, ¡haz que tu creación destaque con un estilo único y funcionalidad superior!",
+        "price": 28000,
+        "stock": 10,
+        "promoted": true
+    },
+    {
+        "id": 2,
+        "name": "SmartBot Navigator",
+        "thumbnail": "product02.jpg",
+        "description": "Descubre el futuro con el SmartBot Navigator, un robot interactivo con pantalla táctil y diseño ergonómico. Perfecto para asistentes personales o exploración, ¡llevala tecnología a otro nivel con este compañero innovador!",
+        "price": 15000,
+        "stock": 15,
+        "promoted": false
+    },
+    {
+        "id": 3,
+        "name": "RoboArm-200",
+        "thumbnail": "product03.jpg",
+        "description": "Potencia tu producción con el RoboArm Pro-200, un brazo robótico industrial de precisión con movimientos suaves y alta resistencia. Ideal para tareas complejas, ¡es la herramienta definitiva para optimizar tu taller robótico!",
+        "price": 26000,
+        "stock": 8,
+        "promoted": false
+    },
+    {
+        "id": 4,
+        "name": "AgileBot Fighter",
+        "thumbnail": "product04.jpg",
+        "description": "Domina las competencias con el AgileBot Fighter, un robot de combate con articulaciones reforzadas y velocidad excepcional. ¡Equipado para victorias, este repuesto es esencial para tu próximo desafío robótico!",
+        "price": 180000,
+        "stock": 5,
+        "promoted": false
+    },
+    {
+        "id": 5,
+        "name": "PrecisionArm X-100",
+        "thumbnail": "product05.jpg",
+        "description": "Mejora la precisión de tu robot con el PrecisionArm X-100, un brazo robótico de alta tecnología para tareas delicadas. ¡Perfecto para ensamblaje y laboratorio, un must para profesionales!",
+        "price": 45000,
+        "stock": 12,
+        "promoted": true
+    },
+    {
+        "id": 6,
+        "name": "AssistBot Core",
+        "thumbnail": "product06.jpg",
+        "description": "Optimiza tu asistente robótico con el AssistBot Core, un módulo central con pantalla integrada y diseño compacto. ¡Ideal para tareas diarias, lleva la eficiencia a tu hogar o negocio!",
+        "price": 12000,
+        "stock": 20,
+        "promoted": true
+    },
+    {
+        "id": 7,
+        "name": "GlobalReach Manipulator",
+        "thumbnail": "product07.jpg",
+        "description": "Amplía las posibilidades con el GlobalReach Manipulator, un brazo robótico con alcance extendido y diseño robusto. ¡Controla el mundo desde tu estación con esta pieza revolucionaria!",
+        "price": 6000000000,
+        "stock": 3,
+        "promoted": false
+    },
+    {
+        "id": 8,
+        "name": "DeliveryBot Wheel Set",
+        "thumbnail": "product08.jpg",
+        "description": "Renueva tu robot de entrega con el DeliveryBot Wheel Set, un conjunto de ruedas duraderas y eficientes. ¡Garantiza entregas rápidas y confiables con este upgrade esencial!",
+        "price": 15000,
+        "stock": 25,
+        "promoted": false
+    },
+    {
+        "id": 9,
+        "name": "FlexiBot Frame",
+        "thumbnail": "product09.jpg",
+        "description": "Construye o repara con el FlexiBot Frame, un chasis adaptable para robots humanoides. ¡Ligero, resistente y personalizable, es la base perfecta para tu próxima creación!",
+        "price": 11000,
+        "stock": 18,
+        "promoted": false
+    },
+    {
+        "id": 10,
+        "name": "CleanBot Duo Kit",
+        "thumbnail": "product10.jpg",
+        "description": "Mantén todo impecable con el CleanBot Duo Kit, un conjunto de repuestos para robots de limpieza con herramientas versátiles. ¡Ahorra tiempo y esfuerzo con esta solución perfecta para hogares inteligentes!",
+        "price": 12000,
+        "stock": 30,
+        "promoted": false
+    },
+    {
+        "id": 11,
+        "name": "VisionBot Sentinel",
+        "thumbnail": "product11.jpg",
+        "description": "Mejora la percepción de tu robot con el VisionBot Sentinel, equipado con ojos LED y sensores de alta definición. ¡Ideal para navegación y seguridad, este repuesto te ofrece control total en cualquier entorno!",
+        "price": 2500,
+        "stock": 22,
+        "promoted": false
+    },
+    {
+        "id": 12,
+        "name": "MobilityBot X-700",
+        "thumbnail": "product12.jpg",
+        "description": "Revoluciona la movilidad con el MobilityBot X-700, un robot humanoide con ruedas avanzadas y panel de control integrado. ¡Perfecto para tareas de vigilancia o entrega, con un diseño robusto y versátil que no te decepcionará!",
+        "price": 24000,
+        "stock": 10,
+        "promoted": false
+    },
+    {
+        "id": 13,
+        "name": "IndustroArm Elite",
+        "thumbnail": "product13.jpg",
+        "description": "Maximiza la productividad con el IndustroArm Elite, un brazo robótico de alta resistencia y precisión para industrias exigentes. ¡Con un agarre potente y diseño ergonómico, es la elección de los profesionales!",
+        "price": 55000,
+        "stock": 7,
+        "promoted": false
+    }
+]
