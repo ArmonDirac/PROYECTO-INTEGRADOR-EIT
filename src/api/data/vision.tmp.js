@@ -1,1 +1,1 @@
-export const visionTmp = "";
+export const visionTmp = "Ser el marketplace líder a nivel global en la comercialización de repuestos para robots humanoides, impulsando el desarrollo de la robótica mediante una oferta diversa, un servicio excepcional y un compromiso con la calidad y la accesibilidad para todos los actores del ecosistema robótico.";

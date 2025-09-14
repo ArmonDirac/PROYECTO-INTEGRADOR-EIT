@@ -1,1 +1,1 @@
-export const missionTmp = "";
+export const missionTmp = "Proveer una plataforma confiable, accesible y especializada que conecte a fabricantes, desarrolladores y entusiastas de robots humanoides con repuestos de alta calidad, fomentando la innovación, la sostenibilidad y el mantenimiento eficiente de estas tecnologías avanzadas.";
