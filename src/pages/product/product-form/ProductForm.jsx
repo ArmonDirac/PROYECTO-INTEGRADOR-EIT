@@ -20,10 +20,12 @@ const ProductForm = (props) => {
             <InputStock formik={formik} />
             <InputThumbnail formik={formik} />
 
-            <img
-                className="product-form__image"
-                src={`/images/products/${formik.values.thumbnail}`}
-                alt="Imagen del demo" />
+            {formik.values.thumbnail && (
+                <img
+                    className="product-form__image"
+                    src={`/images/products/${formik.values.thumbnail}`}
+                    alt="Imagen del demo"/>
+            )}
 
             <div className="product-form__actions">
                 <ButtonPrimary type="submit" disabled={isSubmitDisabled()}>Aceptar</ButtonPrimary>
