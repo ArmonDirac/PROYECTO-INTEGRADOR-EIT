@@ -22,8 +22,8 @@ const ProductForm = (props) => {
 
             <img
                 className="product-form__image"
-                src={`@/images/products/${formik.values.thumbnail}`}
-                alt="Imagen del producto" />
+                src={`/images/products/${formik.values.thumbnail}`}
+                alt="Imagen del demo" />
 
             <div className="product-form__actions">
                 <ButtonPrimary type="submit" disabled={isSubmitDisabled()}>Aceptar</ButtonPrimary>

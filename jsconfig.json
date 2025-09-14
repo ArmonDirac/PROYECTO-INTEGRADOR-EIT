@@ -9,7 +9,7 @@
   },
   "include": [
     "src/**/*",
-    "public"
+    "assets"
   ],
   "exclude": [
     "node_modules",
