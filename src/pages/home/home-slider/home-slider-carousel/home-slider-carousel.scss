@@ -1,8 +1,16 @@
 @use "@/scss/variables" as var;
 
+.home-slider-carousel {
+    &__title {
+        color: var.$color-neutro-100;
+    }
+    &__description {
+        color: var.$color-neutro-200;
+    }
+}
 .slick-dots li button:before {
-  color: var.$color-primary-500; /* Color primario de Material-UI */
+  color: var.$color-neutro-200;
 }
 .slick-dots li.slick-active button:before {
-  color: var.$color-primary-500;
+  color: var.$color-neutro-200;
 }

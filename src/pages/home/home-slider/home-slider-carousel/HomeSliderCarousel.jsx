@@ -1,11 +1,13 @@
 import React from "react";
 import Slider from "react-slick";
-import { Box, Typography, Button } from "@mui/material";
+import { Box } from "@mui/material";
 import slider1Image from "@/public/images/slider/slide1.jpg";
 import slider2Image from "@/public/images/slider/slide2.jpg";
 import slider3Image from "@/public/images/slider/slide3.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "@/pages/home/home-slider/home-slider-carousel/home-slider-carousel.scss";
+import { Text } from "@/components/texts";
 
 const carouselItems = [
     {
@@ -57,13 +59,10 @@ const Carousel = () => {
                                 p: 2,
                                 borderRadius: 1,
                             }}>
-                            <Typography variant="h5" gutterBottom>
+                            <Text variant="h3" className="home-slider-carousel__title">
                                 {item.title}
-                            </Typography>
-                            <Typography variant="body1">{item.description}</Typography>
-                            <Button variant="contained" color="primary" sx={{ mt: 1 }}>
-                Ver más
-                            </Button>
+                            </Text>
+                            <Text variant="p" className="home-slider-carousel__description">{item.description}</Text>
                         </Box>
                     </Box>
                 ))}
