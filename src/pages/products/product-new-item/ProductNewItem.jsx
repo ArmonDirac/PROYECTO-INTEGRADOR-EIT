@@ -19,7 +19,7 @@ const ProductNewItem = (props) => {
             <CardActionArea>
                 <img
                     className="product-new-item__image"
-                    src="@/../public/images/products/create.png"
+                    src="/images/products/create.png"
                     alt="Crear producto"
                     onClick={handleCreateProduct}/>
             </CardActionArea>
