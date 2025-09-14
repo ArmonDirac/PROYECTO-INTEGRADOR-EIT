@@ -1,7 +1,7 @@
 import * as Yup from "yup";
 
 const NAME_MAX_LENGTH = 25;
-const DESCRIPTION_MAX_LENGTH = 100;
+const DESCRIPTION_MAX_LENGTH = 300;
 const THUMBNAIL_MAX_LENGTH = 25;
 
 export const validationSchema = Yup.object({
