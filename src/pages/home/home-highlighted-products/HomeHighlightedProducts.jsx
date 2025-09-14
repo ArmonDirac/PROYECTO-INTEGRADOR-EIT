@@ -6,10 +6,11 @@ import "./home-highlighted-products.scss";
 const HomeHighlightedProducts = () => {
     const { productsContext } = useContext(AppContext);
     const { products, isLoading } = productsContext;
+    const highlightedProducts = products.filter((product) => product.promoted);
 
     return (
         <div className="home-highlighted-products">
-            {products.map((product) => (
+            {highlightedProducts.map((product) => (
                 <ProductItem
                     key={product.id}
                     product={product}
