@@ -1,5 +1,6 @@
 import { Text } from "@/components/texts";
 import AppContext from "@/contexts/AppContext";
+import valuesImage from "@/public/images/about/values.jpg";
 import { useContext } from "react";
 import "./values.scss";
 
@@ -11,7 +12,7 @@ const Values = () => {
         <section className="values">
             <Text className="values__title" variant="h3">Valores</Text>
             <div>
-                <img className="values__image" src={"./src/public/images/about/values.jpg"} alt="Imagen de los valores de la empresa"/>
+                <img className="values__image" src={valuesImage} alt="Imagen de los valores de la empresa"/>
                 <Text className="values__description" variant="p">{institution.about.values}</Text>
             </div>
         </section>
