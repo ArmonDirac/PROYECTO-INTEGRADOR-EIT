@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useInstitution } from "@/hooks/useInstitution";
 import { useProduct } from "@/hooks/useProduct";
 import { useShoppingCart } from "@/hooks/useShoppingCart";
@@ -10,6 +11,7 @@ const AppProvider = (props) => {
     const institutionContext = useInstitution();
     const productsContext = useProduct();
     const shoppingCartContext = useShoppingCart();
+    const [ searchQuery, setSearchQuery ] = useState("");
 
     return (
         <AppContext.Provider
@@ -17,6 +19,8 @@ const AppProvider = (props) => {
                 institutionContext,
                 productsContext,
                 shoppingCartContext,
+                searchQuery,
+                setSearchQuery,
             }}>
             {children}
         </AppContext.Provider>

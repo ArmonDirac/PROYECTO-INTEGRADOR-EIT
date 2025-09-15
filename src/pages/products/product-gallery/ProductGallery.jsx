@@ -1,23 +1,31 @@
+import React, { useContext } from "react";
 import AppContext from "@/contexts/AppContext";
-import { useContext } from "react";
 import ProductItem from "../product-item/ProductItem";
 import ProductNewItem from "../product-new-item/ProductNewItem";
+import ProductSearch from "../product-search/ProductSearch";
 import "./product-gallery.scss";
 
 const ProductGallery = () => {
-    const { productsContext } = useContext(AppContext);
+    const { productsContext, searchQuery } = useContext(AppContext);
     const { products, isLoading } = productsContext;
 
+    const filteredProducts = products.filter((product) =>
+        product.name.toLowerCase().includes(searchQuery.toLowerCase()),
+    );
+
     return (
-        <div className="product-gallery">
-            <ProductNewItem/>
-            {products.map((product) => (
-                <ProductItem
-                    key={product.id}
-                    product={product}
-                    isLoading={isLoading}/>
-            ))}
-        </div>
+        <>
+            <ProductSearch />
+            <div className="product-gallery">
+                <ProductNewItem />
+                {filteredProducts.map((product) => (
+                    <ProductItem
+                        key={product.id}
+                        product={product}
+                        isLoading={isLoading}/>
+                ))}
+            </div>
+        </>
     );
 };
 

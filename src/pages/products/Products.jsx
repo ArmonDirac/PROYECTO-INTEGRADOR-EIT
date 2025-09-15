@@ -5,7 +5,7 @@ import "./products.scss";
 const Products = () => {
     return (
         <div className="products">
-            <Text variant="h2">Productos</Text>
+            <Text variant="h2">Tu impulso tiene valor aquí</Text>
             <ProductGallery />
         </div>
     );
