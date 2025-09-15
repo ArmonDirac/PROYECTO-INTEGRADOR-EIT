@@ -9,7 +9,7 @@ const initialize = () => {
         name: "Armon Dirac SBI (Sociedad de Blockchain Inter-planetaria)",
         address: "Domicilio: Av. Isaac Asimov Sección 31 #44, Nueva Argentina,Continente Norte, Planeta Marte",
         phone: "ID de Teletransporte: PMCNNA 42355 marca 26",
-        email: "entas@mercado-robotico#marte.com.ind",
+        email: "ventas@mercado-robotico#marte.com.ind",
         about: {
             mission: missionTmp,
             vision: visionTmp,
