@@ -1,6 +1,8 @@
 @use "@/scss/variables" as var;
 
 .home-highlighted-paragraph {
+    padding: var.$spacing-md;
     grid-area: "paragraph";
-    background-color: red;
+    background-color: var.$color-primary-500;
+    color: var.$color-neutro-100;
 }
