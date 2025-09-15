@@ -24,6 +24,12 @@ const Text = ({ children, className, variant="p", ...restProps }) => {
                 </h3>
             )}
 
+            {variant === "h4" && (
+                <h4 className={classes} {...restProps}>
+                    {children}
+                </h4>
+            )}
+
             {variant === "p" && (
                 <p className={classes} {...restProps}>
                     {children}

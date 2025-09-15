@@ -31,7 +31,7 @@ const Institution = () => {
 
     return (
         <div className="institution">
-            <Text variant="h3">Datos de contacto</Text>
+            <Text variant="h4">Datos de contacto</Text>
             <ul className="institution__list">
                 {getItems().map((item, index) => (
                     <InstitutionItem key={index} item={item} />
