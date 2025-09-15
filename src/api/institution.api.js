@@ -6,10 +6,10 @@ const KEY_INSTITUTION = "institution";
 
 const initialize = () => {
     const initialData = {
-        name: "Mi App",
-        address: "Av. Siempreviva 100, San Juan, Argentina",
-        phone: "264-411-2233",
-        email: "info@miapp.com",
+        name: "Armon Dirac SBI (Sociedad de Blockchain Inter-planetaria)",
+        address: "Domicilio: Av. Isaac Asimov Sección 31 #44, Nueva Argentina,Continente Norte, Planeta Marte",
+        phone: "ID de Teletransporte: PMCNNA 42355 marca 26",
+        email: "entas@mercado-robotico#marte.com.ind",
         about: {
             mission: missionTmp,
             vision: visionTmp,
