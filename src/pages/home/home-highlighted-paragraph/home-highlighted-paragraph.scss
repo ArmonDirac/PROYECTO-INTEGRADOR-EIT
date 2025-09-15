@@ -4,5 +4,13 @@
     padding: var.$spacing-md;
     grid-area: "paragraph";
     background-color: var.$color-primary-500;
-    color: var.$color-neutro-100;
+    color: white !important;
+
+    &__list {
+        text-align: center;
+        font-size: var.$font-size-xs;
+        font-weight: var.$font-weight-light;
+        line-height: var.$line-height-xs;
+    }
+
 }
