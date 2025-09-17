@@ -41,5 +41,13 @@
             font-weight: var.$font-weight-bold;
             font-size: var.$font-size-sm;
         }
+
+
+    }
+    &__actions {
+        display: flex;
+        flex-direction: row;
+        gap:var.$spacing-md;
+
     }
 }

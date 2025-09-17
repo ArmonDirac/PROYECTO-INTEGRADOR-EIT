@@ -3,20 +3,21 @@ import AppContext from "@/contexts/AppContext";
 import { Table, TableBody, TableCell, TableHead, TableRow } from "@mui/material";
 import { useContext } from "react";
 import "./shopping-cart.scss";
-import { Skeleton } from "@/components/skeleton";
 import { ButtonPrimary } from "@/components/buttons";
 
 const ShoppingCart = () => {
     const { shoppingCartContext } = useContext(AppContext);
-    const { shoppingCart } = shoppingCartContext;
+    const { shoppingCart, purchaseCart, clearCart } = shoppingCartContext;
 
-    /*     const handlePurchaseCart = () => {
-        addArticle(product.id, 1);
+    const handlePurchase = async () => {
+        const result = await purchaseCart();
+        alert(result.message);
     };
 
-    const handleCancelCart = () => {
-        subtractArticle(product.id, 1);
-    }; */
+    const handleClearCart = () => {
+        clearCart();
+    };
+
     return (
         <div className="shopping-cart">
             <Text variant="h2">Carrito</Text>
@@ -31,7 +32,7 @@ const ShoppingCart = () => {
                     </TableRow>
                 </TableHead>
                 <TableBody>
-                    {shoppingCart.articles?.map((article)=>(
+                    {shoppingCart.articles?.map((article) => (
                         <TableRow key={article.id} className="table__body">
                             <TableCell align="left">{article.name}</TableCell>
                             <TableCell align="right">{article.quantity}</TableCell>
@@ -43,16 +44,19 @@ const ShoppingCart = () => {
             </Table>
 
             <div className="table__footer">
-                <Text className="table__total" variant="p">Total: ${shoppingCart.totalAmount?.toFixed(2)}</Text>
+                <Text className="table__total" variant="p">
+                    Total: ${shoppingCart.totalAmount?.toFixed(2)}
+                </Text>
             </div>
-            {/*            <>
-                <Skeleton className="shopping-cart__actions--skeleton" isLoading={isLoading}>
-                    <ButtonPrimary className="shopping-cart__add" size="sm" onClick={handlePurchaseCart}><PurchaseCart/></ButtonPrimary>
-                </Skeleton>
-                <Skeleton className="shopping-cart__actions--skeleton" isLoading={isLoading}>
-                    <ButtonPrimary className="shopping-cart_remove" size="sm" onClick={handleCancelCart}><CancelCart/></ButtonPrimary>
-                </Skeleton>
-            </> */}
+
+            <div className="shopping-cart__actions">
+                <ButtonPrimary size="md" onClick={handlePurchase}>
+                    Comprar
+                </ButtonPrimary>
+                <ButtonPrimary size="md" onClick={handleClearCart}>
+                    Vaciar Carrito
+                </ButtonPrimary>
+            </div>
         </div>
     );
 };

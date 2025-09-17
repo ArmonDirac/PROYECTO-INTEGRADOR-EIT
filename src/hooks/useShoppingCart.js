@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useProduct } from "./useProduct";
 
 const KEY_SHOPPING_CART = "shopping-cart";
+const KEY_PRODUCTS = "products";
 
 export const useShoppingCart = () => {
     const [ shoppingCart, setShoppingCart ] = useState({});
@@ -12,7 +13,6 @@ export const useShoppingCart = () => {
             articles,
             totalQuantity: articles.reduce((acc, item) => acc + item.quantity, 0),
             totalAmount: articles.reduce((acc, item) => acc + item.amount, 0),
-
         };
     };
 
@@ -44,7 +44,7 @@ export const useShoppingCart = () => {
     const addArticle = async (idProduct, quantity) => {
         const product = await fetchProductById(idProduct);
 
-        const articles = shoppingCart.articles;
+        const articles = shoppingCart.articles || [];
         const index = articles.findIndex((item) => item.id === product.id);
 
         if (index >= 0) {
@@ -63,7 +63,7 @@ export const useShoppingCart = () => {
     const subtractArticle = async (idProduct, quantity) => {
         const product = await fetchProductById(idProduct);
 
-        const articles = shoppingCart.articles;
+        const articles = shoppingCart.articles || [];
         const index = articles.findIndex((item) => item.id === product.id);
 
         if (index >= 0) {
@@ -81,6 +81,46 @@ export const useShoppingCart = () => {
         }
     };
 
+    const purchaseCart = async () => {
+        const products = JSON.parse(localStorage.getItem(KEY_PRODUCTS)) || [];
+        const articles = shoppingCart.articles || [];
+
+        for (const article of articles) {
+            const product = products.find((p) => p.id === article.id);
+            if (!product || product.stock < article.quantity) {
+                return {
+                    success: false,
+                    message: "Hay productos con stock insuficiente",
+                };
+            }
+        }
+
+        const updatedProducts = products.map((product) => {
+            const article = articles.find((a) => a.id === product.id);
+            if (article) {
+                return { ...product, stock: product.stock - article.quantity };
+            }
+            return product;
+        });
+
+        localStorage.setItem(KEY_PRODUCTS, JSON.stringify(updatedProducts));
+
+        const emptyCart = createShoppingCartSchema([]);
+        localStorage.setItem(KEY_SHOPPING_CART, JSON.stringify(emptyCart));
+        setShoppingCart(emptyCart);
+
+        return {
+            success: true,
+            message: "¡Compra realizada con éxito!",
+        };
+    };
+
+    const clearCart = () => {
+        const emptyCart = createShoppingCartSchema([]);
+        localStorage.setItem(KEY_SHOPPING_CART, JSON.stringify(emptyCart));
+        setShoppingCart(emptyCart);
+    };
+
     useEffect(() => {
         getShoppingCart();
     }, []);
@@ -89,5 +129,7 @@ export const useShoppingCart = () => {
         shoppingCart,
         addArticle,
         subtractArticle,
+        purchaseCart,
+        clearCart,
     };
 };
